@@ -21,18 +21,8 @@ export const getAllPokemonsInfo = async (
         image: pokemon.sprites.other["official-artwork"].front_default,
       });
     }
-    return pokemons;
-  } catch (err) {
-    throw err;
-  }
-};
 
-export const getSinglePokemon = async (
-  url: string
-): Promise<PokemonDetails> => {
-  try {
-    const pokemon = await getData<PokemonDetails>(url);
-    return pokemon;
+    return pokemons;
   } catch (err) {
     throw err;
   }
