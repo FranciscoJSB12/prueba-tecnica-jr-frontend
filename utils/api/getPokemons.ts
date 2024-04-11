@@ -16,9 +16,11 @@ export const getAllPokemonsInfo = async (
       pokemons.push({
         id: pokemon.id,
         name: pokemon.name,
-        type: pokemon.types[0].type.name,
+        types: pokemon.types.map((t) => t.type.name),
         order: pokemon.order,
         image: pokemon.sprites.other["official-artwork"].front_default,
+        abilities: pokemon.abilities.map((t) => t.ability.name),
+        moves: pokemon.moves.map((m) => m.move.name),
       });
     }
 

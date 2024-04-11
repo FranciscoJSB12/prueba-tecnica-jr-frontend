@@ -1,12 +1,16 @@
 "use client";
 import { useSkipPokemons } from "@/hooks/useSkipPokemons";
 import { usePokemons } from "@/hooks/usePokemons";
+import { usePokemonDetails } from "@/hooks/usePokemonDetails";
 import { PokemonCard } from "../PokemonCard";
 import { PokemonGridBtn } from "../PokemonGridBtn";
 import { BASE_URL } from "@/utils/constants/urls";
+import { PokemonDetails } from "../PokemonDetails";
 
 export const PokemonGrid = () => {
   const { skipPokemons, nextPokemons, lastPokemons } = useSkipPokemons();
+  const { pokemonDetails, openPokemonDetails, closePokemonDetails } =
+    usePokemonDetails();
   const { pokemons, isLoading, error } = usePokemons(
     BASE_URL + `?limit=15&offset=${skipPokemons}`
   );
@@ -21,7 +25,11 @@ export const PokemonGrid = () => {
     <>
       <section className="w-full grid justify-center gap-x-5 grid-cols-[repeat(auto-fill,240px)]">
         {pokemons?.map((p) => (
-          <PokemonCard key={p.id} pokemon={p} />
+          <PokemonCard
+            key={p.id}
+            pokemon={p}
+            openPokemonDetails={openPokemonDetails}
+          />
         ))}
       </section>
       <div className="flex justify-center gap-5">
@@ -32,6 +40,10 @@ export const PokemonGrid = () => {
         />
         <PokemonGridBtn handleClick={nextPokemons} text="Siguiente" />
       </div>
+      <PokemonDetails
+        closePokemonDetails={closePokemonDetails}
+        pokemonDetails={pokemonDetails}
+      />
     </>
   );
 };

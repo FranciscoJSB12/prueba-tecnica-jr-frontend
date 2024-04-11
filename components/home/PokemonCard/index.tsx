@@ -5,11 +5,15 @@ import type { FinalPokemon } from "@/models/FinalPokemon";
 
 interface PokemonCardProps {
   pokemon: FinalPokemon;
+  openPokemonDetails: (pokemon: FinalPokemon) => void;
 }
 
-export const PokemonCard = ({ pokemon }: PokemonCardProps) => {
+export const PokemonCard = ({
+  pokemon,
+  openPokemonDetails,
+}: PokemonCardProps) => {
   const backgroundColor = POKEMON_COLOR_TYPES.find((color) =>
-    color.includes(pokemon.type)
+    color.includes(pokemon.types[0])
   ) as string;
 
   return (
@@ -28,16 +32,14 @@ export const PokemonCard = ({ pokemon }: PokemonCardProps) => {
       <figcaption className="flex flex-col bg-gray-100 gap-1 pt-1 pb-3 relative rounded-b-lg">
         <h2 className="text-gray-700 text-lg italic font-semibold pl-5">
           {capitalizeStr(pokemon.name)}
-          &nbsp;&nbsp;&#35;
-          {`${pokemon.order}`.padStart(3, "0")}
         </h2>
         <p
-          className={`w-fit text-gray-700 font-semibold italic ml-4 px-4 rounded-lg ${backgroundColor}`}
+          className={`w-fit text-white font-semibold italic ml-4 px-4 rounded-lg ${backgroundColor}`}
         >
-          Tipo&nbsp;{capitalizeStr(pokemon.type)}
+          &#35;{`${pokemon.order}`.padStart(3, "0")}
         </p>
         <button
-          onClick={() => console.log(pokemon)}
+          onClick={() => openPokemonDetails(pokemon)}
           className="bg-blue-600 flex items-center justify-center w-10 h-10 rounded-full text-white font-semibold absolute top-3 right-3"
         >
           Más
