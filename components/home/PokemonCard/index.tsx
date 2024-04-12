@@ -23,7 +23,7 @@ export const PokemonCard = ({
         pokemonIds?.includes(pokemon.id)
           ? "border-yellow-400 bg-gray-200"
           : "border-gray-500 " + backgroundColor
-      } rounded-lg shadow-2xl`}
+      } rounded-lg shadow-md`}
     >
       <figure className="w-full h-[240px] mx-auto relative">
         <Image

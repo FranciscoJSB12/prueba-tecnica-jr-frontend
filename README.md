@@ -59,3 +59,7 @@ npm start
 ```
 localhost:3000
 ```
+
+### Puede observar la versión del proyecto desplegada en el siguiente enlace:
+
+[Proyecto desplegado](https://prueba-tecnica-jr-frontend.vercel.app/)
