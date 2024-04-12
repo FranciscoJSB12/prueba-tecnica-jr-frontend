@@ -4,13 +4,18 @@ import { usePokemons } from "@/hooks/usePokemons";
 import { usePokemonDetails } from "@/hooks/usePokemonDetails";
 import { PokemonCard } from "../PokemonCard";
 import { PokemonGridBtn } from "../PokemonGridBtn";
-import { BASE_URL } from "@/utils/constants/urls";
+import { PokemonDetailHead } from "../PokemonDetailHead";
+import { PokemonDetailMain } from "../PokemonDetailMain";
 import { PokemonDetails } from "../PokemonDetails";
+import { BASE_URL } from "@/utils/constants/urls";
+import { PokemonModal } from "../PokemonModal";
 
 export const PokemonGrid = () => {
   const { skipPokemons, nextPokemons, lastPokemons } = useSkipPokemons();
   const { pokemonDetails, openPokemonDetails, closePokemonDetails } =
     usePokemonDetails();
+
+  const { currentPokemon } = pokemonDetails;
   const { pokemons, isLoading, error } = usePokemons(
     BASE_URL + `?limit=15&offset=${skipPokemons}`
   );
@@ -40,10 +45,38 @@ export const PokemonGrid = () => {
         />
         <PokemonGridBtn handleClick={nextPokemons} text="Siguiente" />
       </div>
-      <PokemonDetails
-        closePokemonDetails={closePokemonDetails}
-        pokemonDetails={pokemonDetails}
-      />
+      <PokemonModal pokemonDetails={pokemonDetails}>
+        <PokemonDetailHead closePokemonDetails={closePokemonDetails} />
+        <PokemonDetailMain>
+          {pokemonDetails.isPokemonDetailOpen && (
+            <PokemonCard pokemon={currentPokemon} />
+          )}
+          <PokemonDetails
+            title={
+              currentPokemon.types.length > 1
+                ? "Tipos del Pokemon"
+                : "Tipo del Pokemon"
+            }
+            details={currentPokemon.types}
+            color="bg-ghost"
+          />
+          <PokemonDetails
+            title="Habilidades"
+            details={currentPokemon.abilities}
+            color="bg-poison"
+          />
+          <PokemonDetails
+            title="Estadísticas"
+            details={currentPokemon.stats}
+            color="bg-fire"
+          />
+          <PokemonDetails
+            title="Movimientos"
+            details={currentPokemon.moves}
+            color="bg-dragon"
+          />
+        </PokemonDetailMain>
+      </PokemonModal>
     </>
   );
 };

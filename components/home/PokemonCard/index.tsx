@@ -5,7 +5,7 @@ import type { FinalPokemon } from "@/models/FinalPokemon";
 
 interface PokemonCardProps {
   pokemon: FinalPokemon;
-  openPokemonDetails: (pokemon: FinalPokemon) => void;
+  openPokemonDetails?: (pokemon: FinalPokemon) => void;
 }
 
 export const PokemonCard = ({
@@ -18,7 +18,7 @@ export const PokemonCard = ({
 
   return (
     <article
-      className={`w-[240px] mb-10 ${backgroundColor} border border-gray-500 rounded-lg shadow-2xl`}
+      className={`w-[240px] mb-5 ${backgroundColor} border border-gray-500 rounded-lg shadow-2xl`}
     >
       <figure className="w-full h-[240px] mx-auto relative">
         <Image
@@ -34,16 +34,20 @@ export const PokemonCard = ({
           {capitalizeStr(pokemon.name)}
         </h2>
         <p
-          className={`w-fit text-white font-semibold italic ml-4 px-4 rounded-lg ${backgroundColor}`}
+          className={`w-fit text-white font-semibold italic ${
+            openPokemonDetails ? "ml-4" : "ml-auto mr-4"
+          } px-4 rounded-lg ${backgroundColor}`}
         >
           &#35;{`${pokemon.order}`.padStart(3, "0")}
         </p>
-        <button
-          onClick={() => openPokemonDetails(pokemon)}
-          className="bg-blue-600 flex items-center justify-center w-10 h-10 rounded-full text-white font-semibold absolute top-3 right-3"
-        >
-          Más
-        </button>
+        {openPokemonDetails && (
+          <button
+            onClick={() => openPokemonDetails(pokemon)}
+            className="bg-blue-600 flex items-center justify-center w-10 h-10 rounded-full text-white font-semibold absolute top-3 right-3"
+          >
+            Más
+          </button>
+        )}
       </figcaption>
     </article>
   );

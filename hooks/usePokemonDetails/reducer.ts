@@ -1,25 +1,34 @@
-import { initialState } from "./intialState";
 import { ReducerActions, ActionType } from "./actions";
+
+export const initialState = {
+  isPokemonDetailOpen: false,
+  currentPokemon: {
+    id: 0,
+    name: "",
+    types: [] as string[],
+    order: 0,
+    image: "",
+    abilities: [] as string[],
+    moves: [] as string[],
+    stats: [] as string[],
+  },
+};
 
 export const reducer = (state: typeof initialState, action: ActionType) => {
   switch (action.type) {
-    case ReducerActions.openPokemonDetail:
+    case ReducerActions.openPokemonDetail: {
       return {
-        ...state,
         isPokemonDetailOpen: true,
-        currentPokemon: {
-          name: action.payload.name,
-        },
+        currentPokemon: action.pokemon,
       };
-    case ReducerActions.closePokemonDetail:
-      return {
-        ...state,
-        isPokemonDetailOpen: false,
-        currentPokemon: {
-          name: "",
-        },
-      };
-    default:
+    }
+
+    case ReducerActions.closePokemonDetail: {
+      return initialState;
+    }
+
+    default: {
       return state;
+    }
   }
 };

@@ -6,4 +6,5 @@ export interface FinalPokemon {
   image: string;
   abilities: string[];
   moves: string[];
+  stats: string[];
 }

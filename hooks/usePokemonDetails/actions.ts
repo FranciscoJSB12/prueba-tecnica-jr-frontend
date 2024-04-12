@@ -1,3 +1,5 @@
+import { FinalPokemon } from "../../models/FinalPokemon";
+
 export enum ReducerActions {
   openPokemonDetail = "openPokemonDetail",
   closePokemonDetail = "closePokemonDetail",
@@ -6,8 +8,8 @@ export enum ReducerActions {
 export type ActionType =
   | {
       type: ReducerActions.openPokemonDetail;
-      payload: {
-        name: string;
-      };
+      pokemon: FinalPokemon;
     }
-  | { type: ReducerActions.closePokemonDetail };
+  | {
+      type: ReducerActions.closePokemonDetail;
+    };
