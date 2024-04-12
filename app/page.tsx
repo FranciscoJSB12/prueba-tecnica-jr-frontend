@@ -1,9 +1,9 @@
-import { PokemonGrid } from "@/components/home/PokemonGrid";
+import { PokemonHome } from "@/components/home/PokemonHome";
 
 export default function Home() {
   return (
     <>
-      <PokemonGrid />
+      <PokemonHome />
     </>
   );
 }

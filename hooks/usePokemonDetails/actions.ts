@@ -1,4 +1,4 @@
-import { FinalPokemon } from "../../models/FinalPokemon";
+import { FinalPokemon } from "@/models/FinalPokemon";
 
 export enum ReducerActions {
   openPokemonDetail = "openPokemonDetail",

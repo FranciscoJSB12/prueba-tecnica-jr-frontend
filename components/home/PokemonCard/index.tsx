@@ -6,19 +6,24 @@ import type { FinalPokemon } from "@/models/FinalPokemon";
 interface PokemonCardProps {
   pokemon: FinalPokemon;
   openPokemonDetails?: (pokemon: FinalPokemon) => void;
+  pokemonIds?: number[];
 }
 
 export const PokemonCard = ({
   pokemon,
   openPokemonDetails,
+  pokemonIds,
 }: PokemonCardProps) => {
   const backgroundColor = POKEMON_COLOR_TYPES.find((color) =>
     color.includes(pokemon.types[0])
   ) as string;
-
   return (
     <article
-      className={`w-[240px] mb-5 ${backgroundColor} border border-gray-500 rounded-lg shadow-2xl`}
+      className={`w-[240px] mb-5 border-2  ${
+        pokemonIds?.includes(pokemon.id)
+          ? "border-yellow-400 bg-gray-200"
+          : "border-gray-500 " + backgroundColor
+      } rounded-lg shadow-2xl`}
     >
       <figure className="w-full h-[240px] mx-auto relative">
         <Image

@@ -1,30 +1,42 @@
 import { ReducerActions, ActionType } from "./actions";
+import { FinalPokemon } from "@/models/FinalPokemon";
+
+export interface PokemonDetailState {
+  isPokemonDetailOpen: boolean;
+  currentPokemon: FinalPokemon;
+  pokemonIds: number[];
+}
 
 export const initialState = {
   isPokemonDetailOpen: false,
   currentPokemon: {
     id: 0,
     name: "",
-    types: [] as string[],
+    types: [],
     order: 0,
     image: "",
-    abilities: [] as string[],
-    moves: [] as string[],
-    stats: [] as string[],
+    abilities: [],
+    moves: [],
+    stats: [],
   },
-};
+  pokemonIds: [],
+} as PokemonDetailState;
 
-export const reducer = (state: typeof initialState, action: ActionType) => {
+export const reducer = (state: PokemonDetailState, action: ActionType) => {
   switch (action.type) {
     case ReducerActions.openPokemonDetail: {
       return {
+        ...state,
         isPokemonDetailOpen: true,
         currentPokemon: action.pokemon,
       };
     }
 
     case ReducerActions.closePokemonDetail: {
-      return initialState;
+      return {
+        ...initialState,
+        pokemonIds: [...state.pokemonIds, state.currentPokemon.id],
+      };
     }
 
     default: {

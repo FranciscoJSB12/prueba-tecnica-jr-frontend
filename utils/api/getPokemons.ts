@@ -21,7 +21,10 @@ export const getAllPokemonsInfo = async (
         image: pokemon.sprites.other["official-artwork"].front_default,
         abilities: pokemon.abilities.map((t) => t.ability.name),
         moves: pokemon.moves.map((m) => m.move.name),
-        stats: pokemon.stats.map((s) => `${s.stat.name}: ${s.base_stat}`),
+        stats: pokemon.stats.map((s) => ({
+          name: s.stat.name,
+          base_stat: s.base_stat,
+        })),
       });
     }
 

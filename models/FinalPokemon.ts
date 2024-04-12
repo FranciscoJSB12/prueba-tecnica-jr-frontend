@@ -1,3 +1,8 @@
+export interface StatType {
+  name: string;
+  base_stat: number;
+}
+
 export interface FinalPokemon {
   id: number;
   name: string;
@@ -6,5 +11,5 @@ export interface FinalPokemon {
   image: string;
   abilities: string[];
   moves: string[];
-  stats: string[];
+  stats: StatType[];
 }
