@@ -21,7 +21,9 @@ export const usePokemonDetails = () => {
   };
 
   return {
-    pokemonDetails,
+    isPokemonDetailOpen: pokemonDetails.isPokemonDetailOpen,
+    currentPokemon: pokemonDetails.currentPokemon,
+    pokemonIds: pokemonDetails.pokemonIds,
     openPokemonDetails,
     closePokemonDetails,
   };

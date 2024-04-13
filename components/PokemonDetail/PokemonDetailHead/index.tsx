@@ -1,12 +1,10 @@
+import { useContext } from "react";
 import { XMarkIcon } from "@heroicons/react/16/solid";
+import { PokemonContext } from "@/context/PokemonContext";
 
-interface PokemonDetailHeadProps {
-  closePokemonDetails: () => void;
-}
+export const PokemonDetailHead = () => {
+  const { closePokemonDetails } = useContext(PokemonContext);
 
-export const PokemonDetailHead = ({
-  closePokemonDetails,
-}: PokemonDetailHeadProps) => {
   return (
     <div>
       <button className="block ml-auto" onClick={closePokemonDetails}>

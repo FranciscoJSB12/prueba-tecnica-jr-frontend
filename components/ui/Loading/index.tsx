@@ -6,7 +6,9 @@ export const Loading = () => {
         <div className="absolute w-full h-full rounded-[50%] border-[15px] border-transparent border-t-poison"></div>
         <div className="absolute w-full h-full rounded-[50%] border-[15px] border-transparent border-r-grass"></div>
       </div>
-      <h2 className="text-gray-700 italic pt-5">Cargando...</h2>
+      <h2 className="text-gray-700 text-xl font-semibold italic pt-5">
+        Cargando...
+      </h2>
     </>
   );
 };
