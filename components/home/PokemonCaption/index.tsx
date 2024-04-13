@@ -1,5 +1,5 @@
-import { capitalizeStr } from "@/utils/capitalizeStr";
-import type { FinalPokemon } from "@/models/FinalPokemon";
+import { capitalizeStr } from '@/utils/capitalizeStr';
+import type { FinalPokemon } from '@/models/FinalPokemon';
 
 interface PokemonCationProps {
   pokemon: FinalPokemon;
@@ -19,10 +19,10 @@ export const PokemonCaption = ({
       </h2>
       <p
         className={`w-fit text-white font-semibold italic ${
-          openPokemonDetails ? "ml-4" : "ml-auto mr-4"
+          openPokemonDetails ? 'ml-4' : 'ml-auto mr-4'
         } px-4 rounded-lg ${backgroundColor}`}
       >
-        &#35;{`${pokemon.order}`.padStart(3, "0")}
+        &#35;{`${pokemon.order}`.padStart(3, '0')}
       </p>
       {openPokemonDetails && (
         <button

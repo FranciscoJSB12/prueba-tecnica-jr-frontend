@@ -1,5 +1,5 @@
-import { createContext } from "react";
-import type { FinalPokemon } from "@/models/FinalPokemon";
+import { createContext } from 'react';
+import type { FinalPokemon } from '@/models/FinalPokemon';
 
 interface PokemonContextType {
   pageIndex: number;

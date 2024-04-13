@@ -1,8 +1,8 @@
-import { useReducer } from "react";
-import { ReducerActions } from "./actions";
-import { initialState } from "./reducer";
-import { reducer } from "./reducer";
-import type { FinalPokemon } from "@/models/FinalPokemon";
+import { useReducer } from 'react';
+import { ReducerActions } from './actions';
+import { initialState } from './reducer';
+import { reducer } from './reducer';
+import type { FinalPokemon } from '@/models/FinalPokemon';
 
 export const usePokemonDetails = () => {
   const [pokemonDetails, dispatch] = useReducer(reducer, initialState);

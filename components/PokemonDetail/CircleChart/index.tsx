@@ -1,4 +1,4 @@
-import styles from "./CircleChart.module.css";
+import styles from './CircleChart.module.css';
 
 interface CircleChartProps {
   stat: string;
@@ -32,8 +32,8 @@ export const CircleChart = ({ stat, percentage }: CircleChartProps) => {
           strokeWidth="7.5px"
           r={radius}
           className={`fill-none ${
-            percentage < 50 ? "stroke-fire" : "stroke-grass"
-          } ${styles["circle-progress"]}`}
+            percentage < 50 ? 'stroke-fire' : 'stroke-grass'
+          } ${styles['circle-progress']}`}
           style={{
             strokeDasharray: dashArray,
             strokeDashoffset: dashOffset,
@@ -50,7 +50,7 @@ export const CircleChart = ({ stat, percentage }: CircleChartProps) => {
       </svg>
       <p
         className={`w-fit text-white font-semibold italic mt-2 px-2 rounded-lg ${
-          percentage < 50 ? "bg-fire" : "bg-grass"
+          percentage < 50 ? 'bg-fire' : 'bg-grass'
         }`}
       >
         {stat}

@@ -1,6 +1,6 @@
-import useSWR from "swr";
-import { getAllPokemonsInfo } from "@/utils/api/getPokemons";
-import type { FinalPokemon } from "@/models/FinalPokemon";
+import useSWR from 'swr';
+import { getAllPokemonsInfo } from '@/utils/api/getPokemons';
+import type { FinalPokemon } from '@/models/FinalPokemon';
 
 const fetcher = (url: string) => getAllPokemonsInfo(url);
 

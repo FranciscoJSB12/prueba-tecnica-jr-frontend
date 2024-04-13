@@ -1,4 +1,4 @@
-import { PokemonHome } from "@/components/home/PokemonHome";
+import { PokemonHome } from '@/components/home/PokemonHome';
 
 export default function Home() {
   return (

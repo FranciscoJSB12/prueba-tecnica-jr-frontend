@@ -1,4 +1,4 @@
-import { ExclamationTriangleIcon } from "@heroicons/react/16/solid";
+import { ExclamationTriangleIcon } from '@heroicons/react/16/solid';
 
 export const ErrorMessage = () => {
   return (

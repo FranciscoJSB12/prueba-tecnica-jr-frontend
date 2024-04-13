@@ -1,6 +1,6 @@
-import { PokemonDetailList } from "@/components/PokemonDetail/PokemonDetailList";
-import { CircleChart } from "@/components/PokemonDetail/CircleChart";
-import type { StatType } from "@/models/FinalPokemon";
+import { PokemonDetailList } from '@/components/PokemonDetail/PokemonDetailList';
+import { CircleChart } from '@/components/PokemonDetail/CircleChart';
+import type { StatType } from '@/models/FinalPokemon';
 
 interface PokemonStatsProps {
   stats: StatType[];

@@ -1,7 +1,7 @@
-import { ReactNode } from "react";
-import { PokemonContext } from "./PokemonContext";
-import { usePageIndex } from "@/hooks/usePageIndex";
-import { usePokemonDetails } from "@/hooks/usePokemonDetails";
+import { ReactNode } from 'react';
+import { PokemonContext } from './PokemonContext';
+import { usePageIndex } from '@/hooks/usePageIndex';
+import { usePokemonDetails } from '@/hooks/usePokemonDetails';
 
 interface PokemonContextProps {
   children: ReactNode;

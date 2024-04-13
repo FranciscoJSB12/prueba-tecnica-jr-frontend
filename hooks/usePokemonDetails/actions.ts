@@ -1,8 +1,8 @@
-import { FinalPokemon } from "@/models/FinalPokemon";
+import { FinalPokemon } from '@/models/FinalPokemon';
 
 export enum ReducerActions {
-  openPokemonDetail = "openPokemonDetail",
-  closePokemonDetail = "closePokemonDetail",
+  openPokemonDetail = 'openPokemonDetail',
+  closePokemonDetail = 'closePokemonDetail',
 }
 
 export type ActionType =

@@ -1,6 +1,6 @@
-import { PokemonDetailList } from "@/components/PokemonDetail/PokemonDetailList";
-import { POKEMON_COLOR_TYPES } from "@/utils/constants/pokemonColorTypes";
-import { capitalizeStr } from "@/utils/capitalizeStr";
+import { PokemonDetailList } from '@/components/PokemonDetail/PokemonDetailList';
+import { POKEMON_COLOR_TYPES } from '@/utils/constants/pokemonColorTypes';
+import { capitalizeStr } from '@/utils/capitalizeStr';
 
 interface PokemonDetailProps {
   title: string;

@@ -1,5 +1,5 @@
-import { ReducerActions, ActionType } from "./actions";
-import { FinalPokemon } from "@/models/FinalPokemon";
+import { ReducerActions, ActionType } from './actions';
+import { FinalPokemon } from '@/models/FinalPokemon';
 
 export interface PokemonDetailState {
   isPokemonDetailOpen: boolean;
@@ -11,10 +11,10 @@ export const initialState = {
   isPokemonDetailOpen: false,
   currentPokemon: {
     id: 0,
-    name: "",
+    name: '',
     types: [],
     order: 0,
-    image: "",
+    image: '',
     abilities: [],
     moves: [],
     stats: [],

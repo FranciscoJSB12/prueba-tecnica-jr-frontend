@@ -1,7 +1,7 @@
-import { getData } from "@/utils/api/getData";
-import type { PokeApiResponse } from "@/models/pokeApiResponse";
-import type { PokemonDetails } from "@/models/pokemonDetails";
-import type { FinalPokemon } from "@/models/FinalPokemon";
+import { getData } from '@/utils/api/getData';
+import type { PokeApiResponse } from '@/models/pokeApiResponse';
+import type { PokemonDetails } from '@/models/pokemonDetails';
+import type { FinalPokemon } from '@/models/FinalPokemon';
 
 export const getAllPokemonsInfo = async (
   url: string
@@ -18,7 +18,7 @@ export const getAllPokemonsInfo = async (
         name: pokemon.name,
         types: pokemon.types.map((t) => t.type.name),
         order: pokemon.order,
-        image: pokemon.sprites.other["official-artwork"].front_default,
+        image: pokemon.sprites.other['official-artwork'].front_default,
         abilities: pokemon.abilities.map((t) => t.ability.name),
         moves: pokemon.moves.map((m) => m.move.name),
         stats: pokemon.stats.map((s) => ({

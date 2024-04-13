@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { FinalPokemon } from "@/models/FinalPokemon";
+import Image from 'next/image';
+import { FinalPokemon } from '@/models/FinalPokemon';
 
 interface PokemonImageProps {
   pokemon: FinalPokemon;

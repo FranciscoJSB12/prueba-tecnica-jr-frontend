@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { PokemonContext } from "@/context/PokemonContext";
-import { PokemonCard } from "@/components/home/PokemonCard";
-import { PokemonDetails } from "@/components/PokemonDetail/PokemonDetails";
-import { PokemonStats } from "@/components/PokemonDetail/PokemonStats";
+import { useContext } from 'react';
+import { PokemonContext } from '@/context/PokemonContext';
+import { PokemonCard } from '@/components/home/PokemonCard';
+import { PokemonDetails } from '@/components/PokemonDetail/PokemonDetails';
+import { PokemonStats } from '@/components/PokemonDetail/PokemonStats';
 
 export const PokemonDetailMain = () => {
   const { currentPokemon, isPokemonDetailOpen } = useContext(PokemonContext);
@@ -12,8 +12,8 @@ export const PokemonDetailMain = () => {
       <PokemonDetails
         title={
           currentPokemon.types.length > 1
-            ? "Tipos del Pokemon"
-            : "Tipo del Pokemon"
+            ? 'Tipos del Pokemon'
+            : 'Tipo del Pokemon'
         }
         details={currentPokemon.types}
       />

@@ -63,3 +63,11 @@ localhost:3000
 ### Puede observar la versión del proyecto desplegada en el siguiente enlace:
 
 [Proyecto desplegado](https://prueba-tecnica-jr-frontend.vercel.app/)
+
+## Otros scripts
+
+### Para ejecutar el linter corrar en su terminal el siguiente comando:
+
+```
+npm run lint
+```

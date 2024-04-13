@@ -1,7 +1,7 @@
-"use client";
-import { ReactNode } from "react";
-import { Navigation } from "@/components/ui/Navigation";
-import { PokemonProvider } from "@/context/PokemonProvider";
+'use client';
+import { ReactNode } from 'react';
+import { Navigation } from '@/components/ui/Navigation';
+import { PokemonProvider } from '@/context/PokemonProvider';
 
 interface LayoutProps {
   children: ReactNode;

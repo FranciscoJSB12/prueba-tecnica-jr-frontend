@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { XMarkIcon } from "@heroicons/react/16/solid";
-import { PokemonContext } from "@/context/PokemonContext";
+import { useContext } from 'react';
+import { XMarkIcon } from '@heroicons/react/16/solid';
+import { PokemonContext } from '@/context/PokemonContext';
 
 export const PokemonDetailHead = () => {
   const { closePokemonDetails } = useContext(PokemonContext);
