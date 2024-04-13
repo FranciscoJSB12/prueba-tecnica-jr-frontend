@@ -60,10 +60,6 @@ npm start
 localhost:3000
 ```
 
-### Puede observar la versión del proyecto desplegada en el siguiente enlace:
-
-[Proyecto desplegado](https://prueba-tecnica-jr-frontend.vercel.app/)
-
 ## Otros scripts
 
 ### Para ejecutar el linter corrar en su terminal el siguiente comando:
@@ -71,3 +67,13 @@ localhost:3000
 ```
 npm run lint
 ```
+
+## Proyecto desplegado en el siguiente enlace:
+
+[VISITE AQUÍ LA PRUEBA TECNICA DESPLEGADA](https://prueba-tecnica-jr-frontend.vercel.app/)
+
+Desarrollado por Francisco Salazar - Frontend Developer con React
+
+## Contacto
+
+Correo electrónico: javif8@gmail.com
