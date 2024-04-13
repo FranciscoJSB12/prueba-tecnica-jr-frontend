@@ -1,5 +1,4 @@
-import { ReactNode, useContext } from 'react';
-import { PokemonContext } from '@/context/PokemonContext';
+import { ReactNode } from 'react';
 
 interface NavigationItemProps {
   children: ReactNode;
@@ -12,7 +11,9 @@ export const NavigationItem = ({
 }: NavigationItemProps) => {
   return (
     <li onClick={handleClick} className="cursor-pointer">
-      <p className="text-white text-lg italic">{children}</p>
+      <p className="text-white text-lg italic hover:text-gray-700">
+        {children}
+      </p>
     </li>
   );
 };

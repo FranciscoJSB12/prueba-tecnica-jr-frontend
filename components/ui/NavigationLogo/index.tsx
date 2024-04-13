@@ -11,7 +11,9 @@ export const NavigationLogo = ({
 }: NavigationLogoProps) => {
   return (
     <li onClick={handleClick} className="cursor-pointer">
-      <p className="text-white text-2xl italic font-semibold">{children}</p>
+      <p className="text-white text-2xl italic font-semibold hover:text-gray-700">
+        {children}
+      </p>
     </li>
   );
 };
