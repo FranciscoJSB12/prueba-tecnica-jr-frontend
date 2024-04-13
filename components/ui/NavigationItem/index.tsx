@@ -12,7 +12,7 @@ export const NavigationItem = ({
 }: NavigationItemProps) => {
   return (
     <li onClick={handleClick} className="cursor-pointer">
-      <p className="text-white text-md italic">{children}</p>
+      <p className="text-white text-lg italic">{children}</p>
     </li>
   );
 };

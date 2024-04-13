@@ -10,7 +10,7 @@ export const PokemonGrid = ({ children, isHidden }: PokemonGridProps) => {
     <section
       className={`${
         isHidden ? 'hidden' : ''
-      } w-full grid justify-center gap-x-5 grid-cols-[repeat(auto-fill,240px)]`}
+      } w-full grid justify-center gap-x-5 grid-cols-[repeat(auto-fill,260px)]`}
     >
       {children}
     </section>

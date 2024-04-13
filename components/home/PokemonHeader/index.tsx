@@ -1,6 +1,6 @@
 export const PokemonHeader = () => {
   return (
-    <header className="w-full max-w-7xl flex flex-col items-center gap-6 py-10 px-4 mb-10 bg-gray-300 rounded-lg">
+    <header className="w-full max-w-5xl flex flex-col items-center gap-6 py-10 px-4 mb-10 bg-gray-300 rounded-lg">
       <h1 className="text-gray-900 font-semibold text-xl italic">
         ¡Bienvenido a PokeWorld!
       </h1>

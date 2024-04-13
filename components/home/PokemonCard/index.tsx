@@ -19,7 +19,7 @@ export const PokemonCard = ({
   ) as string;
   return (
     <article
-      className={`w-[240px] mb-5 border-2  ${
+      className={`w-[260px] mb-5 border-2  ${
         pokemonIds?.includes(pokemon.id)
           ? 'border-yellow-400 bg-gray-200'
           : 'border-gray-500 ' + backgroundColor

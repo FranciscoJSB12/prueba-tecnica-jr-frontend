@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { usePokemons } from '@/hooks/usePokemons';
 import { PokemonContext } from '@/context/PokemonContext';
+import { PokemonHeader } from '../PokemonHeader';
 import { PokemonGrid } from '../PokemonGrid';
 import { PokemonCard } from '../PokemonCard';
 import { PaginationButton } from '../PaginationButton';
@@ -27,6 +28,7 @@ export const PokemonList = ({ pageIndex, isHidden }: PokemonGridProps) => {
 
   return (
     <>
+      {pageIndex === 0 && <PokemonHeader />}
       <PokemonGrid isHidden={isHidden}>
         {pokemons?.map((p) => (
           <PokemonCard
